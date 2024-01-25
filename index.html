@@ -11,13 +11,39 @@
 <body>
     <h1 class="heading"></h1>
     <img src="assets/images/logo.png" alt="logo" class="logo"> Love maths
-    <div class="game-area">
 
+    <div class="game-area">
+        <dir class="contols-area">
+            <button class="btn btn--big btn--green">
+                <i class="fas fa-plus"></i>
+            </button>            
+            <button class="btn btn--big btn--blue">
+                <i class="fas fa-minus"></i>
+            </button>            
+            <button class="btn btn--big btn--organge">
+                <i class="fas fa-times"></i>
+            </button>            
+            <button class="btn btn--big btn--red">
+                <i class="fas fa-divide"></i>
+            </button>
+        </dir>
+        <div clas="question-area">
+            <span id="Operand1">0</span>
+            <span id="Operator">x</span>
+            <span id="Operand2">0</span>
+            <span>=</span>
+            <p class="answer-message">Enter Answer</p>
+            <input type="number" id="answer-box">
+        </div>
+        <button class="btn btn--gray">Submit Answer</button>
     </div>
+
     <div class="score-area">
         <p class="scores">Correct Answers <span id="score" >0</span></p>
         <p class="scores">Incorrect Answers <span >0</span></p>
     </div>
+
+
 
    <script src="assets/js/script.js"></script> 
 </body>
