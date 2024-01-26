@@ -45,8 +45,10 @@ function checkAnswer() {
     
     if (isCorrect) {
         alert("Correct");
+        incrementScore();
     } else {
         alert("Wrong, answer is " + calculatedAnswer);
+        incrementWrongAnswer();
     }
     runGame(calculatedAnswer);
 }
@@ -62,15 +64,16 @@ function calculateCorrectAnswer() {
         alert("Unknown operator");
     }
 
-
 }
 
 function incrementScore() {
-
+    let oldScore = document.getElementById("score").innerText;
+    document.getElementById("score").innerText = ++oldScore;
 }
 
 function incrementWrongAnswer() {
-
+    let oldScore = document.getElementById("incorrect").innerText;
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
 
 function displayAdditionQuestion(operand1, operand2) {
